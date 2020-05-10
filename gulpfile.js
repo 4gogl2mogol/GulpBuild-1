@@ -36,7 +36,10 @@ gulp.task('serve', function() {
             baseDir: 'build',
             //открывать список файлов из baseDir: 'build'
             directory: true
-        }
+        },
+        //Открывать в firefox,
+        //можно задать массив ['google chrome', 'firefox']
+        browser: 'firefox'
     });
     //обзор файловой системы на предмет изменения файлов
     browserSync.watch('build/**/*.*').on('change', browserSync.reload);
